@@ -1,12 +1,8 @@
-def fibonacci(num)
-	arr = [1, 1]
-	if num <=2
-		arr.take(num)
-	else
+	def fibonacci(num)
+		arr = [1, 1]
 		loop do
-		arr << (arr[(arr.length - 2)] + arr.last)
-		break if arr.length > num
+			arr << (arr[(arr.length - 2)] + arr.last)
+			break if arr.length > num
 		end
+		return arr.take(num)
 	end
-	return arr.take(num)
-end
